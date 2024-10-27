@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: olitreadwellaksstoredemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: olitreadwellaksstoredemo
+  template:
+    metadata:
+      labels:
+        app: olitreadwellaksstoredemo 
+    spec:
+      containers:
+        - name: olitreadwellaksstoredemo 
+          image: olitreadwellcs750420241026acr.azurecr.io/olitreadwellaksstoredemo
+          ports:
+          - containerPort: 5001
